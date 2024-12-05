@@ -7,6 +7,29 @@
 </a>
 
 <hr>
+  <form action="/directors/update_director" method="post">
+    <input type="hidden" id="path_id" name="path_id" value="<%= @the_director.id %>">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" value="<%= @the_director.name %>">
+    </div>
+    <div>
+      <label for="dob">Dob</label>
+      <input type="date" id="dob" name="dob" value="<%= @the_director.dob %>">
+    </div>
+    </div>
+      <label for="bio">Bio</label>
+      <input id="bio" name="bio" value="<%= @the_director.bio %>">
+    </div>
+    <div>
+      <label for="image">Image</label>
+      <input id="image" name="image" value="<%= @the_director.image %>">
+    </div>
+    <div>
+      <button>Update director</button>
+    </div>
+  </form>
+<hr>
 
 <dl>
   <dt>
