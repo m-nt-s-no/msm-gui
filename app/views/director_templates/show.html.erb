@@ -8,12 +8,9 @@
   </a>
 </div>
 <div>
-  <form action="/delete_director/<%= @the_director.id %>" method="post">
-    <input type="hidden" id="path_id" name="path_id" value="<%= @the_director.id %>">
-    <div>
-      <button>Delete director</button>
-    </div>
-  </form>
+  <a href="/delete_director/<%= @the_director.id %>">
+    Delete director
+  </a>
 </div>
 
 <hr>

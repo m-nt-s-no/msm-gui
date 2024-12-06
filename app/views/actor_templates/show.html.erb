@@ -6,12 +6,9 @@
   Go back
 </a>
 <div>
-  <form action="/delete_actor/<%= @the_actor.id %>" method="post">
-    <input type="hidden" id="path_id" name="path_id" value="<%= @the_actor.id %>">
-    <div>
-      <button>Delete actor</button>
-    </div>
-  </form>
+  <a href="/delete_actor/<%= @the_actor.id %>">
+    Delete actor
+  </a>
 </div>
 
 <hr>
