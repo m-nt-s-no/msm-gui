@@ -2,9 +2,19 @@
   Director #<%= @the_director.id %> details
 </h1>
 
-<a href="/directors">
-  Go back
-</a>
+<div>
+  <a href="/directors">
+    Go back
+  </a>
+</div>
+<div>
+  <form action="/delete_director/<%= @the_director.id %>" method="post">
+    <input type="hidden" id="path_id" name="path_id" value="<%= @the_director.id %>">
+    <div>
+      <button>Delete director</button>
+    </div>
+  </form>
+</div>
 
 <hr>
   <form action="/directors/update_director" method="post">
