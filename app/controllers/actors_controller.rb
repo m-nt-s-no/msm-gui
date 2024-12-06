@@ -30,7 +30,7 @@ class ActorsController < ApplicationController
     @the_actor.image = params.fetch("image")
     @the_actor.updated_at = Time.current
     @the_actor.save
-    render({ :template => "actor_templates/show" })
+    redirect_to("/actors/#{@the_actor.id}")
   end
 
   def delete

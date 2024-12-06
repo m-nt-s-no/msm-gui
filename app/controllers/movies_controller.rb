@@ -32,7 +32,7 @@ class MoviesController < ApplicationController
     @the_movie.director_id = params.fetch("director_id")
     @the_movie.updated_at = Time.current
     @the_movie.save
-    render({ :template => "movie_templates/show" })
+    redirect_to("/movies/#{@the_movie.id}")
   end
 
   def delete

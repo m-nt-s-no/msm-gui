@@ -52,7 +52,7 @@ class DirectorsController < ApplicationController
     @the_director.image = params.fetch("image")
     @the_director.updated_at = Time.current
     @the_director.save
-    render({ :template => "director_templates/show" })
+    redirect_to("/directors/#{@the_director.id}")
   end
 
   def delete
